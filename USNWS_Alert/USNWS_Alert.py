@@ -55,7 +55,7 @@ for svc in libreapi.get_service_for_host(nws_monitor_id):
     for svc2 in svc:
         if svc2['service_desc'] in Valid_Location:
             del Valid_Location[svc2['service_desc']]
-#Add any missing NWS
+#Add any missing Locations
 for loc_name, loc_data in Valid_Location.items():
     print("Creating:" + loc_name)
     libreapi.add_service_for_host({'type':'http','ip':'api.weather.gov',
