@@ -10,7 +10,7 @@ services.service_message contains pattern found
 
 '''
 
-Except_Location=["ON-PREM","EdgeCloud"]  #Locations within US that NWS monitoring isn't wanted.
+Except_Location=[]  #Locations within US that NWS monitoring isn't wanted.
 nws_monitor_name="National Weather Service (NWS) Monitor" #Name of NWS Monitor device
 nws_match_params="-r \"\\\"event\\\"[:]\s(\\\".*Warning\\\")\" --invert-regex" #Parameters for NWS Monitoring Checks (Gets all Warnings: "-r \"\\\"event\\\"[:]\s(\\\".*Warning\\\")\" --invert-regex" )
 nws_alert_prepend="NWS Warning for" #Text to prepend to NWS Monitoring checks
